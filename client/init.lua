@@ -3,6 +3,7 @@ local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 RegisterCommand('start_fight', function()
 
 ---- Distances    
+local floor_distance = 1
 local distance1 = 1.1
 local distance2 = 2.2
 local distance3 = 3.2
@@ -62,8 +63,8 @@ Prop11:Spawn()
 Prop11:SetRotation(vec3(0, 90, 0))
 */
 
-for distance = 1, 4 do
-    local Prop_floor= Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
+for distance = 1, 4, 1.2 do
+    local Prop_floor= Object:new('prop_shuttering04', coords-vec3(floor_distance, 0, 1))
 Prop_floor:Spawn()
 Prop_floor:SetRotation(vec3(0, 90, 0))
 end
