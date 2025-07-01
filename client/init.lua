@@ -38,7 +38,7 @@ end
 
 
 ---- Fighting Ped
-local ped = Ped:new('a_m_m_golfer_01', coords)
+local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 0 , 1))
 local groupa = joaat('group-a')
 local groupb = joaat('group-b') 
 ped:Spawn()
