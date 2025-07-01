@@ -39,20 +39,13 @@ local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, distance3, .5))
 ped:Spawn()
 TaskCombatPed(ped.handle, LocalPlayer.handle, 67108864, 16)
 ped:Freeze(true)
-/*
-local groupa = joaat('group-a')
-local groupb = joaat('group-b') 
-SetRelationshipBetweenGroups(5, CreateGroup(groupa), CreateGroup(groupb))
-SetPedRelationshipGroupHash(ped.handle, groupa)
-SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
-*/
 LocalPlayer:SetCoords(coords+vec3(distance3, distance3, 0))
 LocalPlayer:SetRotation(vec3(0, 0, 90))
 LocalPlayer:Freeze(true)
 
 Wait(3000)
 print("Gay")
-Ped:Freeze(false)
+ped:Freeze(false)
 LocalPlayer:Freeze(false)
 
 
