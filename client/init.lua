@@ -3,7 +3,7 @@ local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 RegisterCommand('start_fight', function()
 
 ---- Distances    
-local distance = 1
+local distance1 = 1
 local distance2 = 2
 local distance4 = 4
 
