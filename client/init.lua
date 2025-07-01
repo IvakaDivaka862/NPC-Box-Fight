@@ -40,7 +40,7 @@ end
 ---- Fighting Ped
 local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 0 , 1))
 ped:Spawn()
-TaskCombatPed('a_m_m_golfer_01', LocalPlayer)
+TaskCombatPed('a_m_m_golfer_01', LocalPlayer, 0, 16)
 /*
 local groupa = joaat('group-a')
 local groupb = joaat('group-b') 
