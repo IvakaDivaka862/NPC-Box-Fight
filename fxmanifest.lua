@@ -10,8 +10,11 @@ dependency 'esx_lib'
 
 shared_script '@esx_lib/imports/shared/package.lua'
 
-file 'client/**'
-
 client_script 'client/init.lua'
 
-server_script 'server/init.lua'
+files {
+    'client/**',
+    'html/**'
+}
+
+ui_page 'html/index.html'

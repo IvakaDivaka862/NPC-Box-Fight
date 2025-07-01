@@ -1,0 +1,37 @@
+body {
+    display: grid;
+    margin: 0;
+}
+
+#container {
+    background-color: #292929;
+    color:#77cce6;
+    border-radius: 1em;  
+    justify-self: center;
+    align-self: center;
+    padding: 1em;
+    display: grid;
+    gap: 1em;
+}
+
+#buttons button {
+    background-color:#77cce6;
+    color:#292929;
+    border: none;
+    border-radius: 1em;
+}
+
+#container p {
+    margin: 0;
+}
+
+#rewards {
+    display: flex;
+    justify-content: space-around;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    
+}
