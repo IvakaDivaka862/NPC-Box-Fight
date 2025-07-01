@@ -4,11 +4,8 @@ local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 RegisterCommand('start_fight', function()
 
 ---- Distances    
-local distance1 = 1.1
-local distance2 = 2.2
 local distance3 = 3.2
 local distance4 = 4
-local distance4and2 = 4.2
 
 
 
@@ -38,7 +35,7 @@ end
 
 
 ---- Fighting Ped
-local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 3, 0))
+local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, distance3, 0))
 ped:Spawn()
 TaskCombatPed(ped.handle, LocalPlayer.handle, 67108864, 16)
 /*
@@ -49,7 +46,7 @@ SetPedRelationshipGroupHash(ped.handle, groupa)
 SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
 */
 
-
+LocalPlayer:SetCoords(coords+vec3(distance3, distance3, 0))
 
 end, false)
 
