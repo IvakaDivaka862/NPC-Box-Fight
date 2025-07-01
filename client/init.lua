@@ -1,9 +1,15 @@
 local Object = require('@esx_lib/imports/client/entity/object')
 local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 RegisterCommand('start_fight', function()
+
+---- Distances    
+local distance = 1
 local distance2 = 2
 local distance4 = 4
 
+
+
+---- Props
 local coords = LocalPlayer:GetCoords()
 local Prop1 = Object:new('prop_shuttering04', coords+vec3(distance4, 0, -.5))
 Prop1:Spawn()
@@ -24,9 +30,13 @@ local Prop5 = Object:new('prop_shuttering04', coords+vec3(0, 0, -1))
 Prop5:Spawn()
 Prop5:SetRotation(vec3(0, 90, 0))
 
-local Prop6 = Object:new('prop_shuttering04', coords+vec3(distance2, 0, -1))
+local Prop6 = Object:new('prop_shuttering04', coords+vec3(distance1, 0, -1))
 Prop6:Spawn()
 Prop6:SetRotation(vec3(0, 90, 0))
+
+local Prop7 = Object:new('prop_shuttering04', coords+vec3(distance2, 0, -1))
+Prop7:Spawn()
+Prop7:SetRotation(vec3(0, 90, 0))
 
 end, false)
 
