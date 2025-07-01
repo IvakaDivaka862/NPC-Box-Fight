@@ -12,7 +12,9 @@ Prop2:Spawn()
 
 local Prop3 = Object:new('prop_shuttering04', coords-vec3(0, 5, 0))
 Prop3:Spawn()
-Prop3:SetRotation(vec3(90, 0, 0))
+Prop3:SetRotation(vec3(0, 90, 0))
+
+
 
 end, false)
 
