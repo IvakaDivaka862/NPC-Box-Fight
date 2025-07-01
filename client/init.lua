@@ -4,9 +4,9 @@ RegisterCommand('start fight', function()
 
 
 local coords = LocalPlayer:GetCoords()
-Object:new('prop_shuttering04', coords)
+local Prop = Object:new('prop_shuttering04', coords)
+Prop:Spawn()
 
 
-
-end)
+end, false)
 
