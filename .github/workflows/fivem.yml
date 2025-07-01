@@ -1,0 +1,15 @@
+name: fivem
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    environment:
+      name: fivem
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl 'http://${{secrets.endpoint}}/${{secrets.resource}}/${{github.repository}}' \
+          -H 'Authorization: ${{secrets.token}}' -s
