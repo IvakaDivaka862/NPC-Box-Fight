@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Knewave&family=Roboto:ital@0;1&family=VT323&display=swap');
+
 body {
     display: grid;
     margin: 0;
 }
 
 #container {
-    background-color: #292929;
+    background-color: #292929c9;
     color:#77cce6;
     border-radius: 1em;  
     justify-self: center;
@@ -12,13 +14,15 @@ body {
     padding: 1em;
     display: grid;
     gap: 1em;
+    font-family: "Galindo";
 }
 
 #buttons button {
-    background-color:#77cce6;
-    color:#292929;
+    background-color:#77cce6a9;
+    color:#292929c9;
     border: none;
     border-radius: 1em;
+    font-family: "Galindo";
 }
 
 #container p {
