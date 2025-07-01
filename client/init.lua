@@ -7,6 +7,7 @@ local distance1 = 1.1
 local distance2 = 2.2
 local distance3 = 3.2
 local distance4 = 4
+local distance4and2 = 4.2
 
 
 
@@ -52,6 +53,10 @@ Prop10:Spawn()
 Prop10:SetRotation(vec3(0, 90, 0))
 
 local Prop11 = Object:new('prop_shuttering04', coords-vec3(distance3, 0, 1))
+Prop11:Spawn()
+Prop11:SetRotation(vec3(0, 90, 0))
+
+local Prop11 = Object:new('prop_shuttering04', coords-vec3(distance4and2, 0, 1))
 Prop11:Spawn()
 Prop11:SetRotation(vec3(0, 90, 0))
 
