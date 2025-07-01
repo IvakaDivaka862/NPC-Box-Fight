@@ -28,6 +28,7 @@ local Prop4 = Object:new('prop_shuttering04', coords+vec3(0, distance4, -.5))
 Prop4:Spawn()
 Prop4:SetRotation(vec3(0, 0, 270))
 
+/*
 local Prop5 = Object:new('prop_shuttering04', coords+vec3(0, 0, -1))
 Prop5:Spawn()
 Prop5:SetRotation(vec3(0, 90, 0))
@@ -59,8 +60,13 @@ Prop11:SetRotation(vec3(0, 90, 0))
 local Prop11 = Object:new('prop_shuttering04', coords-vec3(distance4and2, 0, 1))
 Prop11:Spawn()
 Prop11:SetRotation(vec3(0, 90, 0))
+*/
 
-
+for distance = 1, 4 do
+    local Prop_floor= Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
+Prop_floor:Spawn()
+Prop_floor:SetRotation(vec3(0, 90, 0))
+end
 
 end, false)
 
