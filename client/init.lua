@@ -62,7 +62,7 @@ Prop11:Spawn()
 Prop11:SetRotation(vec3(0, 90, 0))
 */
 
-for distance = 1, 8, 1.2 do
+for distance = -4, 8, 1.2 do
     local Prop_floor= Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
 Prop_floor:Spawn()
 Prop_floor:SetRotation(vec3(0, 90, 0))
