@@ -4,10 +4,10 @@ RegisterCommand('start_fight', function()
 
 
 local coords = LocalPlayer:GetCoords()
-local Prop = Object:new('prop_shuttering04', coords+vec3(1, 0, 0))
+local Prop = Object:new('prop_shuttering04', coords+vec3(5, 0, 0))
 Prop:Spawn()
 
-local Prop2 = Object:new('prop_shuttering04', coords-vec3(1, 0, 0))
+local Prop2 = Object:new('prop_shuttering04', coords-vec3(5, 0, 0))
 Prop2:Spawn()
 
 
