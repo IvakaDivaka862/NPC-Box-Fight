@@ -51,8 +51,8 @@ LocalPlayer:SetCoords(coords+vec3(distance3, distance3, 0))
 LocalPlayer:Freeze(true)
 
 Wait(3000)
-LocalPlayer:Freeze(false)
 Ped:Freeze(false)
+LocalPlayer:Freeze(false)
 
 
 end, false)
