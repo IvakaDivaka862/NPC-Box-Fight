@@ -1,4 +1,5 @@
 local Object = require('@esx_lib/imports/client/entity/object')
+local Ped = require('@esx_lib/imports/client/entity/ped')
 local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 RegisterCommand('start_fight', function()
 
@@ -34,5 +35,19 @@ Prop_floor:Spawn()
 Prop_floor:SetRotation(vec3(0, 90, 0))
 end
 
+
+
+---- Fighting Ped
+local ped = Ped:new('a_m_m_golfer_01', coords)
+local groupa = joaat('group-a')
+local groupb = joaat('group-b') 
+
+SetRelationshipBetweenGroups(5, CreateGroup(groupa), CreateGroup(groupb))
+SetPedRelationshipGroupHash(ped.handle, groupa)
+SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
+
+
+
 end, false)
+
 
