@@ -53,4 +53,4 @@ SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
 
 end, false)
 
-
+SetMaxWantedLevel(0)
