@@ -38,7 +38,7 @@ end
 
 
 ---- Fighting Ped
-local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 0 , 1))
+local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 3, 0))
 ped:Spawn()
 TaskCombatPed(ped.handle, LocalPlayer.handle, 67108864, 16)
 /*
