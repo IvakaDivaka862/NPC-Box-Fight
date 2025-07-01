@@ -41,7 +41,7 @@ end
 local ped = Ped:new('a_m_m_golfer_01', coords)
 local groupa = joaat('group-a')
 local groupb = joaat('group-b') 
-
+ped:Spawn()
 SetRelationshipBetweenGroups(5, CreateGroup(groupa), CreateGroup(groupb))
 SetPedRelationshipGroupHash(ped.handle, groupa)
 SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
