@@ -8,10 +8,10 @@ local Prop1 = Object:new('prop_shuttering04', coords+vec3(distance, 0, -.5))
 Prop1:Spawn()
 Prop1:SetRotation(vec3(0, 0, 180))
 
-local Prop2 = Object:new('prop_shuttering04', coords-vec3(distance, 0, .5))
+local Prop2 = Object:new('prop_shuttering04', coords-vec3(distance, 0, -.5))
 Prop2:Spawn()
 
-local Prop3 = Object:new('prop_shuttering04', coords-vec3(0, distance, -.5))
+local Prop3 = Object:new('prop_shuttering04', coords-vec3(0, distance, .5))
 Prop3:Spawn()
 Prop3:SetRotation(vec3(0, 0, 90))
 
