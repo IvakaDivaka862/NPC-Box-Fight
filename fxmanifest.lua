@@ -12,4 +12,6 @@ shared_script '@esx_lib/imports/shared/package.lua'
 
 file 'client/**'
 
-client_script 'client/client.lua'
+client_script 'client/init.lua'
+
+server_script 'server/init.lua'
