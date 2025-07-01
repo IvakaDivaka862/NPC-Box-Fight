@@ -39,14 +39,15 @@ end
 
 ---- Fighting Ped
 local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, 0 , 1))
+ped:Spawn()
+SetPedConfigFlag(ped, 38, true)
 /*
 local groupa = joaat('group-a')
 local groupb = joaat('group-b') 
-ped:Spawn()
 SetRelationshipBetweenGroups(5, CreateGroup(groupa), CreateGroup(groupb))
 SetPedRelationshipGroupHash(ped.handle, groupa)
-*/
 SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
+*/
 
 
 
