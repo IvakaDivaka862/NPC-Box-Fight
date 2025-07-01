@@ -38,6 +38,7 @@ end
 local ped = Ped:new('a_m_m_golfer_01', coords-vec3(distance3, distance3, 0))
 ped:Spawn()
 TaskCombatPed(ped.handle, LocalPlayer.handle, 67108864, 16)
+ped:Freeze(true)
 /*
 local groupa = joaat('group-a')
 local groupb = joaat('group-b') 
@@ -47,6 +48,12 @@ SetPedRelationshipGroupHash(LocalPlayer.handle, groupb)
 */
 
 LocalPlayer:SetCoords(coords+vec3(distance3, distance3, 0))
+LocalPlayer:Freeze(true)
+
+Wait(3000)
+LocalPlayer:Freeze(false)
+Ped:Freeze(false)
+
 
 end, false)
 
