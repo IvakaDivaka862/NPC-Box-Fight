@@ -51,9 +51,12 @@ while not IsEntityDead(ped.handle) do
     Wait(0)
 end
 
+Wait(2000)
 SendNUIMessage({'OpenMenu', true, 1, 0, 0})
+SetNuiFocus(true, true)
 
 
 end, false)
+
 
 SetMaxWantedLevel(0)
