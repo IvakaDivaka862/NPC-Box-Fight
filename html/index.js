@@ -12,15 +12,13 @@ const Fight = {
             element.getElementById('npc').innerText = `You've beaten ${npc} NPCs`
         }
         const [confirm, cancel] = element.querySelectorAll('#buttons > button')
-        console.log(confirm)
-        console.log(cancel)
         confirm.addEventListener('click', () => {
             fetch('confirm')
-            ocument.body.replaceChild()
+            document.body.replaceChildren()
         })
         cancel.addEventListener('click', () => {
             fetch('cancel')
-            ocument.body.replaceChild()
+            document.body.replaceChildren()
         })
         document.body.appendChild(element)
     }
