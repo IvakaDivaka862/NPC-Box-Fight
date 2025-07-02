@@ -54,7 +54,7 @@ RegisterCommand('start_fight', function()
 
     Wait(2000)
     SendNUIMessage({'OpenMenu', true, 1, 0, 0})
-    SetNuiFocus(true, true)
+        SetNuiFocus(true, true)
 end, false)
 
 
