@@ -11,7 +11,9 @@ const Fight = {
             element.getElementById('money').innerText = `+${money}€`
             element.getElementById('npc').innerText = `You've beaten ${npc} NPCs`
         }
-        const [confirm, cancel] = document.querySelectorAll('#buttons > button')
+        const [confirm, cancel] = element.querySelectorAll('#buttons > button')
+        console.log(confirm)
+        console.log(cancel)
         confirm.addEventListener('click', () => {
             fetch('confirm')
             ocument.body.replaceChild()
