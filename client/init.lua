@@ -71,7 +71,6 @@ Nui.RegisterCallback('cancel', function(data)
 end)
 
 -- Wanted Level
-
 if Config.WantedLevel == 0
 then SetMaxWantedLevel(0)
 
