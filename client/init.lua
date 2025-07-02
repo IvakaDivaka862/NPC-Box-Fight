@@ -60,6 +60,11 @@ RegisterCommand('start_fight', function()
     Wait(2000)
     SendNUIMessage({'OpenMenu', true, 1, 0, 0})
         SetNuiFocus(true, true)
+
+        -- Wanted Level
+    if Config.WantedLevel then
+        SetMaxWantedLevel(Config.WantedLevel)
+    end
 end, false)
 
 
@@ -70,8 +75,3 @@ end)
 Nui.RegisterCallback('cancel', function(data)
     SetNuiFocus(false, false)
 end)
-
--- Wanted Level
-if Config.WantedLevel then
-    SetMaxWantedLevel(Config.WantedLevel)
-end
