@@ -15,6 +15,7 @@ body {
     display: grid;
     gap: 1em;
     font-family: "Galindo";
+    user-select: none;
 }
 
 #buttons button {
