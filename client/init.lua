@@ -22,7 +22,7 @@ local function createRing(coords)
     Prop4:SetRotation(vec3(0, 0, 270))
 
     for distance = -3, 5, 1.2 do
-        local Prop_floor= Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
+        local Prop_floor = Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
         Prop_floor:Spawn()
         Prop_floor:SetRotation(vec3(0, 90, 0))
     end
@@ -70,4 +70,23 @@ Nui.RegisterCallback('cancel', function(data)
     SetNuiFocus(false, false)
 end)
 
-SetMaxWantedLevel(0)
+-- Wanted Level
+
+if Config.WantedLevel == 0
+then SetMaxWantedLevel(0)
+
+elseif Config.WantedLevel == 1
+then SetMaxWantedLevel(1)
+
+elseif Config.WantedLevel == 2
+then SetMaxWantedLevel(2)
+
+elseif Config.WantedLevel == 3
+then SetMaxWantedLevel(3)
+
+elseif Config.WantedLevel == 4
+then SetMaxWantedLevel(4)
+
+elseif Config.WantedLevel == 5
+then SetMaxWantedLevel(5)
+end
