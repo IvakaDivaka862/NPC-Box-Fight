@@ -44,9 +44,14 @@ LocalPlayer:SetRotation(vec3(0, 0, 90))
 LocalPlayer:Freeze(true)
 
 Wait(3000)
-print("Gay")
 ped:Freeze(false)
 LocalPlayer:Freeze(false)
+
+while not IsEntityDead(ped.handle) do
+    Wait(0)
+end
+
+SendNUIMessage({'OpenMenu', true, 1, 0, 0})
 
 
 end, false)
