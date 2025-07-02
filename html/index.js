@@ -13,11 +13,11 @@ const Fight = {
         }
         const [confirm, cancel] = element.querySelectorAll('#buttons > button')
         confirm.addEventListener('click', () => {
-            fetch('confirm')
+            fetch(`https://${GetParentResourceName()}/confirm`)
             document.body.replaceChildren()
         })
         cancel.addEventListener('click', () => {
-            fetch('cancel')
+            fetch(`https://${GetParentResourceName()}/cancel`)
             document.body.replaceChildren()
         })
         document.body.appendChild(element)
