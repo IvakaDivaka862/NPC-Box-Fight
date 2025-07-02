@@ -64,8 +64,71 @@ RegisterCommand('start_fight', function()
         -- Wanted Level
     if Config.WantedLevel then
         SetPlayerWantedLevel(LocalPlayer.id, Config.WantedLevel, false)
-    end
+end
+
+        -- Dispatch
+   if Config.Dispatch == 'auto' then
+    local qs_dispatch = GetResourceState('qs-dispatch') == 'started'
+    local cd_dispatch = GetResourceState('cd_dispatch') == 'started'
+    if qs_dispatch then
+        Config.Dispatch = 'qs'
+    elseif cd_dispatch then
+        Config.Dispatch = 'cd'
+    else
+        Config.Dispatch = 'ps'
+    end 
+end
+    if
+   Config.Dispatch == 'qs' then
+    local playerData = exports['qs-dispatch']:GetPlayerInfo()
+TriggerServerEvent('qs-dispatch:server:CreateDispatchCall', {
+    job = { Config.PoliceJobs }, -- Targeted jobs
+    callLocation = playerData.coords, -- Player's current location
+    callCode = { code = 'Street Fight', snippet = 'Fight' }, -- Dispatch code
+    message = "street_1: ".. playerData.street_1.. " street_2: ".. playerData.street_2.. 
+              " sex: ".. playerData.sex.. " vehicle_label: ".. playerData.vehicle_label.. 
+              " vehicle_colour: ".. playerData.vehicle_colour.. " vehicle_plate: ".. playerData.vehicle_plate.. 
+              " speed: ".. playerData.speed, -- Detailed call message
+    flashes = false, -- No flashing icon
+    image = nil, -- Optional image URL for dispatch
+    blip = {
+        sprite = 488, -- Blip icon
+        scale = 1.5,  -- Blip size
+        colour = 1,   -- Blip color
+        flashes = true, -- Blip flashes
+        text = 'Street Fight', -- Blip label
+        time = (20 * 1000), -- Blip duration in milliseconds
+    }
+})
+
+elseif Config.Dispatch == 'cd' then
+local data = exports['cd_dispatch']:GetPlayerInfo()
+TriggerServerEvent('cd_dispatch:AddNotification', {
+    job_table = { Config.PoliceJobs }, 
+    coords = data.coords,
+    title = 'Street Fight',
+    message = 'A '..data.sex..' is fighting at '..data.street, 
+    flash = 0,
+    unique_id = data.unique_id,
+    sound = 1,
+    blip = {
+        sprite = 431, 
+        scale = 1.2, 
+        colour = 3,
+        flashes = false, 
+        text = '911 - Street Fight',
+        time = 5,
+        radius = 0,
+    }
+})
+elseif Config.Dispatch == 'ps' then
+exports['ps-dispatch']:Fight()
+end
+
+
 end, false)
+
+
 
 
 Nui.RegisterCallback('confirm', function(data)
