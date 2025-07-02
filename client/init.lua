@@ -59,11 +59,11 @@ RegisterCommand('start_fight', function()
 
     Wait(2000)
     SendNUIMessage({'OpenMenu', true, 1, 0, 0})
-        SetNuiFocus(true, true)
+    SetNuiFocus(true, true)
 
         -- Wanted Level
     if Config.WantedLevel then
-        SetMaxWantedLevel(Config.WantedLevel)
+        SetPlayerWantedLevel(LocalPlayer.id, Config.WantedLevel, false)
     end
 end, false)
 
