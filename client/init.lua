@@ -23,8 +23,8 @@ local function createRing(coords)
 
     for distance = -3, 5, 1.2 do
         local Prop_floor= Object:new('prop_shuttering04', coords-vec3(distance, 0, 1))
-    Prop_floor:Spawn()
-    Prop_floor:SetRotation(vec3(0, 90, 0))
+        Prop_floor:Spawn()
+        Prop_floor:SetRotation(vec3(0, 90, 0))
     end
 end
 
