@@ -2,6 +2,7 @@ local Object = require('@esx_lib/imports/client/entity/object')
 local Ped = require('@esx_lib/imports/client/entity/ped')
 local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
 local Nui = require('@esx_lib/imports/client/nui')
+local Config = require('shared/config')
 
 local function createRing(coords)
     local distance4 = 4
@@ -71,21 +72,6 @@ Nui.RegisterCallback('cancel', function(data)
 end)
 
 -- Wanted Level
-if Config.WantedLevel == 0
-then SetMaxWantedLevel(0)
-
-elseif Config.WantedLevel == 1
-then SetMaxWantedLevel(1)
-
-elseif Config.WantedLevel == 2
-then SetMaxWantedLevel(2)
-
-elseif Config.WantedLevel == 3
-then SetMaxWantedLevel(3)
-
-elseif Config.WantedLevel == 4
-then SetMaxWantedLevel(4)
-
-elseif Config.WantedLevel == 5
-then SetMaxWantedLevel(5)
+if Config.WantedLevel then
+    SetMaxWantedLevel(Config.WantedLevel)
 end
