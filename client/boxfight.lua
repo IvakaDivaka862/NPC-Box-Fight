@@ -124,11 +124,11 @@ end, false)
 
 
 
-dui.RegisterCallback('confirm', function(data)
+nui.RegisterCallback('confirm', function(data)
     SetNuiFocus(false, false)
 end)
 
-dui.RegisterCallback('cancel', function(data)
+nui.RegisterCallback('cancel', function(data)
     SetNuiFocus(false, false)
 end)
 
