@@ -10,7 +10,7 @@ dependency 'esx_lib'
 
 shared_script '@esx_lib/imports/shared/package.lua'
 
-client_script 'client/**'
+client_scripts 'client/**'
 
 
 file { 
