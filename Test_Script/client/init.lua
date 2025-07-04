@@ -1,0 +1,7 @@
+local Object = require('@esx_lib/imports/client/entity/object')
+local Ped = require('@esx_lib/imports/client/entity/ped')
+local LocalPlayer = require('@esx_lib/imports/client/entity/ped/localplayer')
+local Nui = require('@esx_lib/imports/client/nui')
+local Config = require('shared/config')
+local BoxFight = require('client/boxfight')
+local FollowNpcs = require('client/follownpcs')
