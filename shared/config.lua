@@ -11,6 +11,8 @@ Config.PoliceJobs = { 'police', 'sheriff' } -- You can add police jobs in here, 
 
 Config.BlackListJobs = { 'police', 'sheriff', 'ambulance' } -- these are the jobs which cant use the fighting services
 
+Config.VehicleSpawnerCommand = 'vehicle_spawn' -- set this to your desired command, but ALWAYS use an underscore for spaces and ALL the letters MUST be lowercase
+
 
 
 return Config

@@ -13,4 +13,4 @@ local function SpawnVehicle(vehicle)
 end
 
 
-RegisterCommand('vehicle_spawner', SpawnVehicle, false)
+RegisterCommand(Config.VehicleSpawnerCommand, SpawnVehicle, false)
